@@ -9,6 +9,13 @@ TagManager:
   - Destroyer
   - MiniWorldCamera
   - Water
+  - CinemachineTarget
+  - ZI1
+  - ZC1
+  - ZI3
+  - ZC3
+  - ZI2
+  - ZC2
   layers:
   - Default
   - TransparentFX
