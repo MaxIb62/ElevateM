@@ -6,7 +6,7 @@ public class magnetpoint : MonoBehaviour
 {
     public float forceFactor = 200f;
 
-    List<Rigidbody> rgObjects = new List<Rigidbody>();
+    public List<Rigidbody> rgObjects = new List<Rigidbody>();
     Transform magnetP;
 
     void Start()
@@ -14,10 +14,11 @@ public class magnetpoint : MonoBehaviour
         magnetP = GetComponent<Transform>();
     }
     // Start is called before the first frame update
-    void OnTriggerEnter(Collider other)
+   void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("aaaa"))
             rgObjects.Add(other.GetComponent<Rigidbody>());
+
     }
     void FixedUpdate()
     {
@@ -29,6 +30,6 @@ public class magnetpoint : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("aaaa"))
-            rgObjects.Add(other.GetComponent<Rigidbody>());
+           rgObjects.Remove(other.GetComponent<Rigidbody>());
     }
 }
