@@ -17,6 +17,7 @@ TagManager:
   - ZI2
   - ZC2
   - aaaa
+  - elevatorbox
   layers:
   - Default
   - TransparentFX
