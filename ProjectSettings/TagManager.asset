@@ -10,14 +10,19 @@ TagManager:
   - MiniWorldCamera
   - Water
   - CinemachineTarget
-  - ZI1
-  - ZC1
-  - ZI3
-  - ZC3
-  - ZI2
-  - ZC2
   - aaaa
   - elevatorbox
+  - ObjetoPiso1
+  - ObjetoPiso2
+  - ObjetoPiso3
+  - ObjetoPiso4
+  - ObjetoPiso5
+  - ObjetoPiso6
+  - ObjetoPiso7
+  - ObjetoPiso8
+  - ObjetoPiso9
+  - ObjetoPiso10
+  - estante
   layers:
   - Default
   - TransparentFX

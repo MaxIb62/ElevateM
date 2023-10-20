@@ -5,7 +5,7 @@ using UnityEngine;
 public class magnetpoint : MonoBehaviour
 {
     public float forceFactor = 200f;
-
+    public List<string> tagsToAttract = new List<string>();
     public List<Rigidbody> rgObjects = new List<Rigidbody>();
     Transform magnetP;
 
@@ -13,13 +13,19 @@ public class magnetpoint : MonoBehaviour
     {
         magnetP = GetComponent<Transform>();
     }
-    // Start is called before the first frame update
-   void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("aaaa"))
-            rgObjects.Add(other.GetComponent<Rigidbody>());
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (tagsToAttract.Contains(other.tag))
+        {
+            Rigidbody rgObj = other.GetComponent<Rigidbody>();
+            if (rgObj != null)
+            {
+                rgObjects.Add(rgObj);
+            }
+        }
     }
+
     void FixedUpdate()
     {
         foreach (Rigidbody rgObj in rgObjects)
@@ -27,9 +33,16 @@ public class magnetpoint : MonoBehaviour
             rgObj.AddForce((magnetP.position - rgObj.position) * forceFactor * Time.fixedDeltaTime);
         }
     }
+
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("aaaa"))
-           rgObjects.Remove(other.GetComponent<Rigidbody>());
+        if (tagsToAttract.Contains(other.tag))
+        {
+            Rigidbody rgObj = other.GetComponent<Rigidbody>();
+            if (rgObj != null)
+            {
+                rgObjects.Remove(rgObj);
+            }
+        }
     }
 }
