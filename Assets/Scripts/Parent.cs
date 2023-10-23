@@ -9,12 +9,12 @@ public class Parent : MonoBehaviour
 
     private void Start()
     {
-        parentTransform = GameObject.Find("Estantería").transform;
+        parentTransform = GameObject.Find("Cube").transform;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("estante")) // Reemplaza "ColliderTag" con la etiqueta adecuada del Collider.
+        if (other.CompareTag("elevator")) // Reemplaza "ColliderTag" con la etiqueta adecuada del Collider.
         {
             isInsideCollider = true;
             transform.SetParent(parentTransform);

@@ -23,6 +23,7 @@ TagManager:
   - ObjetoPiso9
   - ObjetoPiso10
   - estante
+  - elevator
   layers:
   - Default
   - TransparentFX
