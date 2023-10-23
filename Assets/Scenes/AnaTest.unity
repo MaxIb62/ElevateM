@@ -152,7 +152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 414978, guid: c4dc818a3d0107c43a6ad73bdfca8766, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.15
+      value: -10.098
       objectReference: {fileID: 0}
     - target: {fileID: 414978, guid: c4dc818a3d0107c43a6ad73bdfca8766, type: 3}
       propertyPath: m_LocalPosition.y
@@ -160,7 +160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 414978, guid: c4dc818a3d0107c43a6ad73bdfca8766, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 28.402
+      value: 31.2
       objectReference: {fileID: 0}
     - target: {fileID: 414978, guid: c4dc818a3d0107c43a6ad73bdfca8766, type: 3}
       propertyPath: m_LocalRotation.w
@@ -360,6 +360,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5c71e636a6fa3a468f3709a6bd4388a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &31828817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31828809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bbd675e51ce16f4ea5c424648b4bffe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggle: {fileID: 1630480886632163091}
 --- !u!1 &146587138 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6404892059112192704, guid: a907f2b5a5ce38d45a820402c49bc0bf, type: 3}
@@ -876,7 +889,7 @@ GameObject:
   - component: {fileID: 4439580888920414823}
   - component: {fileID: 8368722834335354677}
   m_Layer: 0
-  m_Name: CanvasTablet
+  m_Name: ToogleCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2053,7 +2066,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8966625836814982022
 RectTransform:
   m_ObjectHideFlags: 0
