@@ -9,7 +9,7 @@ public class TActivator : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("elevatorbox")) 
+        if (other.CompareTag("toggle")) 
         {
             toggle.isOn = true; // Activa el Toggle
         }
@@ -17,7 +17,7 @@ public class TActivator : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("elevatorbox"))
+        if (other.CompareTag("toggle"))
         {
             
             toggle.isOn = false;
