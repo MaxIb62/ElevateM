@@ -9,7 +9,7 @@ public class Parent : MonoBehaviour
 
     private void Start()
     {
-        parentTransform = GameObject.Find("Estantería").transform;
+        parentTransform = GameObject.Find("Parent").transform;
     }
 
     private void OnCollisionEnter(Collision collision)
