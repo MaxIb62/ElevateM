@@ -4,25 +4,23 @@ using UnityEngine;
 
 public class Panell : MonoBehaviour
 {
-    public GameObject panel;
+        public string nombreObjetoInteractuable;
+        public GameObject panel;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))  // Asegúrate de que solo el jugador puede activar el panel
+        private void OnTriggerEnter(Collider other)
         {
-            ActivatePanel();
-            Invoke("DeactivatePanel", 3f);  // Desactiva el panel después de 3 segundos
+            if (other.gameObject.name == nombreObjetoInteractuable)
+            {
+                panel.SetActive(true);
+                Invoke("DesactivarPanel", 3f);
+            }
         }
-    }
 
-    void ActivatePanel()
-    {
-        panel.SetActive(true);
-    }
-
-    void DeactivatePanel()
-    {
-        panel.SetActive(false);
-    }
+        private void DesactivarPanel()
+        {
+            panel.SetActive(false);
+        }
 }
+
+
 
