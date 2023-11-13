@@ -25,6 +25,8 @@ TagManager:
   - elevatorbox
   - toggle
   - ObjetoIncorrecto
+  - Correct
+  - incorrect
   layers:
   - Default
   - TransparentFX

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class pickup : MonoBehaviour
 {
-    public GameObject collider;
+    public GameObject correcto;
+    public GameObject incorrecto;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,16 +20,20 @@ public class pickup : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Correct"))
         {
-            collider.SetActive(false);
+            correcto.SetActive(true);
         }
+      /*  else if (other.CompareTag("correct"))
+        {
+            incorrecto.SetActive(true);
+        }*/
     }
-    public void OnTriggerExit(Collider other)
+   /* public void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             collider.SetActive(true);
         }
-    }
+    }*/
 }
