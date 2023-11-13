@@ -24,6 +24,7 @@ TagManager:
   - estante
   - elevatorbox
   - toggle
+  - ObjetoIncorrecto
   layers:
   - Default
   - TransparentFX

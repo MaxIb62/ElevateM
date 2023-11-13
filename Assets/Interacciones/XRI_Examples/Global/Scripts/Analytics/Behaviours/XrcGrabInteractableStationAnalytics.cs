@@ -44,6 +44,14 @@ namespace UnityEngine.XR.Content.Interaction.Analytics
 
         float m_TimeToSendWateringPlant;
 
+        [Header("Panel Activation")]
+        [SerializeField]
+        Canvas m_PanelCanvas;
+
+        [SerializeField]
+        float m_PanelActivationDuration = 2f;
+        bool m_PanelActive = false;
+
         void Awake()
         {
             XrcAnalyticsUtils.Register(m_InstantInteractables, new GrabSimpleObjectInstant());
@@ -58,6 +66,25 @@ namespace UnityEngine.XR.Content.Interaction.Analytics
             OnRestorePiggyBank(m_PigBank);
 
             XrcAnalyticsUtils.Register(m_RibbonStickInteractable, new GrabRibbonStick());
+        }
+
+        void ActivatePanel()
+        {
+            if (m_PanelCanvas != null)
+            {
+                m_PanelCanvas.gameObject.SetActive(true);
+                m_PanelActive = true;
+                Invoke("DeactivatePanel", m_PanelActivationDuration); // Desactiva el panel después de un cierto tiempo
+            }
+        }
+
+        void DeactivatePanel()
+        {
+            if (m_PanelCanvas != null && m_PanelActive)
+            {
+                m_PanelCanvas.gameObject.SetActive(false);
+                m_PanelActive = false;
+            }
         }
 
         void OnWateringPlant(GameObject otherGameObject)
@@ -90,5 +117,7 @@ namespace UnityEngine.XR.Content.Interaction.Analytics
             if (unbreakable != null)
                 unbreakable.onRestore.AddListener(OnRestorePiggyBank);
         }
+
+       
     }
 }
