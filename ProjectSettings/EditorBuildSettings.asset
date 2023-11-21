@@ -9,8 +9,17 @@ EditorBuildSettings:
     path: Assets/Interacciones/XRI_Examples/Scenes/XRI_Examples_Main.unity
     guid: ba755f5a181505a4799b21685d4c7576
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 0cc67d5b98cc0254681c7e23b01a02c1
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 86a8d2565abf06342834edd65ed8c1e1
+  - enabled: 1
     path: Assets/Scenes/EscenaPrincipal.unity
     guid: 12b0f413503f30e488d03a699a9cd8d7
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 6b9400df50251a547a827d2d3524b902
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 8260bdfb386a1584e8b1650d07a6eff8, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: fba6072275013e6448e381f83d131b7f, type: 2}
